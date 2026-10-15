@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Link Redirector</title>
+    <script>
+        // Add your links to this array
+        const links = [
+            "https://www.khanacademy.org/math/ap-calculus-bc",
+            "https://classroom.google.com",
+            "https://www.khanacademy.org/math/ap-precalculus",
+            "https://www.khanacademy.org/ela/9th-and-10th-grade-grammar",
+            "https://www.todoist.com"
+        ];
+
+        function redirectToRandomLink() {
+            // Pick a random index from the array
+            const randomIndex = Math.floor(Math.random() * links.length);
+            // Redirect to the chosen URL
+            window.location.href = links[randomIndex];
+        }
+
+        // Run the redirect function as soon as the page loads
+        window.onload = redirectToRandomLink;
+    </script>
+</head>
+<body>
+    <p>Redirecting to a random link...</p>
+</body>
+</html>
